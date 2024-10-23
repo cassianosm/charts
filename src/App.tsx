@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import EditChart from './pages/EditChart';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { RoutePaths } from './constants';
 
 const App = () => (
   <div className="flex flex-col min-h-screen">
@@ -11,8 +12,8 @@ const App = () => (
       <Header />
       <main className="flex-grow">
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/edit/:id" element={<EditChart />} />
+          <Route path={RoutePaths.Home} element={<Dashboard />} />
+          <Route path={RoutePaths.Edit} element={<EditChart />} />
         </Routes>
       </main>
       <Footer />
