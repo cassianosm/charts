@@ -17,7 +17,7 @@ interface CustomLinkProps {
 const CustomLink = ({ to, label }: CustomLinkProps): JSX.Element => (
   <Link
     to={to}
-    className="text-blue-400 text-sm sm:text-base lg:text-lg hover:text-blue-300 hover:underline transition-colors"
+    className="text-blue-600 text-sm sm:text-base lg:text-lg hover:text-blue-500 hover:underline transition-colors"
     aria-label={label}
   >
     {label}
