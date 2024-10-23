@@ -3,6 +3,7 @@ import { ResponseChart } from '../api/types';
 import { getCharts } from '../api/charts';
 import { ChartType } from '../api/types';
 import CustomLink from '../components/CustomLink';
+import MainWrapper from '../components/MainWrapper';
 
 /**
  * Dashboard component that fetches and displays a list of charts.
@@ -26,11 +27,10 @@ const Dashboard = (): JSX.Element => {
     fetchCharts();
   }, []);
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <ul>
+    <MainWrapper title="Dashboard">
+      <ul className="grid grid-cols-1 gap-10 lg:grid-cols-2 w-full">
         {charts.map((chart, index) => (
-          <li key={index}>
+          <li key={index} className="bg-white rounded-lg shadow-md p-6">
             <p>{chart.chartTitle}</p>
             {chart.chartType === ChartType.BAR && (
               <CustomLink to={`/edit/${index}`} label="Edit Chart" />
@@ -38,7 +38,7 @@ const Dashboard = (): JSX.Element => {
           </li>
         ))}
       </ul>
-    </div>
+    </MainWrapper>
   );
 };
 

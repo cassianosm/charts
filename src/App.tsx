@@ -9,7 +9,7 @@ const App = () => (
   <div className="flex flex-col min-h-screen">
     <Router>
       <Header />
-      <main className="flex-grow">
+      <main className="flex-grow px-4">
         <Routes>
           <Route path={RoutePaths.Home} element={<Dashboard />} />
           <Route path={RoutePaths.Edit} element={<EditChart />} />
