@@ -1,0 +1,25 @@
+{
+  "chartType": "bar - stacked",
+  "chartTitle": "Quarterly Revenue by Product Category",
+  "xAxisLabel": "Quarter",
+  "yAxisLabel": "Revenue ($)",
+  "categories": ["Electronics", "Clothing", "Home & Garden", "Books"],
+  "data": [
+    {
+      "x": "Q1",
+      "values": [45000, 28000, 35000, 18000]
+    },
+    {
+      "x": "Q2",
+      "values": [52000, 32000, 41000, 21000]
+    },
+    {
+      "x": "Q3",
+      "values": [58000, 35000, 48000, 25000]
+    },
+    {
+      "x": "Q4",
+      "values": [70000, 45000, 55000, 30000]
+    }
+  ]
+}

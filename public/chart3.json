@@ -1,0 +1,45 @@
+{
+  "chartType": "line",
+  "chartTitle": "Monthly Sales Trends by Product Category",
+  "xAxisLabel": "Month",
+  "yAxisLabel": "Sales ($)",
+  "categories": ["Electronics", "Clothing", "Home & Garden"],
+  "data": [
+    {
+      "x": "Jan",
+      "Electronics": 45000,
+      "Clothing": 28000,
+      "Home & Garden": 35000
+    },
+    {
+      "x": "Feb",
+      "Electronics": 48000,
+      "Clothing": 30000,
+      "Home & Garden": 37000
+    },
+    {
+      "x": "Mar",
+      "Electronics": 52000,
+      "Clothing": 32000,
+      "Home & Garden": 41000
+    },
+    {
+      "x": "Apr",
+      "Electronics": 55000,
+      "Clothing": 35000,
+      "Home & Garden": 43000
+    },
+    {
+      "x": "May",
+      "Electronics": 58000,
+      "Clothing": 38000,
+      "Home & Garden": 46000
+    },
+    {
+      "x": "Jun",
+      "Electronics": 62000,
+      "Clothing": 40000,
+      "Home & Garden": 50000
+    }
+  ]
+}

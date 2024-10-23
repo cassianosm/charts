@@ -1,0 +1,11 @@
+{
+  "chartType": "pie",
+  "chartTitle": "Market Share by Brand",
+  "data": [
+    { "x": "Brand A", "y": 30 },
+    { "x": "Brand B", "y": 25 },
+    { "x": "Brand C", "y": 20 },
+    { "x": "Brand D", "y": 15 },
+    { "x": "Others", "y": 10 }
+  ]
+}
