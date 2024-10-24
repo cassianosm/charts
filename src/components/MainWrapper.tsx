@@ -19,9 +19,9 @@ const MainWrapper = ({
   title: string;
   children: JSX.Element;
 }): JSX.Element => (
-  <div className="p-4">
+  <div className="p-1 md:p-4">
     <h2 className="text-2xl font-bold mb-4">{title}</h2>
-    <div className="p-6">{children}</div>
+    <div className="p-1 md:p-6">{children}</div>
   </div>
 );
 
