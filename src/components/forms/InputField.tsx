@@ -19,6 +19,7 @@ const InputField: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <input
+      id={name}
       type={type}
       name={name}
       value={value}

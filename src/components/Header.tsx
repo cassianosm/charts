@@ -18,7 +18,11 @@ const Header = (): JSX.Element => {
       <h1 className="text-lg lg:text-2xl">Charts</h1>
       {location.pathname !== RoutePaths.Home && (
         <nav className="ml-auto">
-          <CustomLink to={RoutePaths.Home} label="Go to Dashboard" />
+          <CustomLink
+            to={RoutePaths.Home}
+            label="Go to Dashboard"
+            className="text-white hover:text-white"
+          />
         </nav>
       )}
     </header>

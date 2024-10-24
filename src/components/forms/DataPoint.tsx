@@ -46,6 +46,9 @@ const DataPoint: React.FC<DataPointProps> = ({
 }: DataPointProps): JSX.Element => {
   return (
     <div className="flex items-center space-x-2">
+      <label htmlFor={`label-${index}`} className="block text-sm font-medium">
+        Label
+      </label>
       <InputField
         type="text"
         name={`label-${index}`}
@@ -53,6 +56,9 @@ const DataPoint: React.FC<DataPointProps> = ({
         onChange={e => onChange(index, 'label', e.target.value)}
         className="flex-grow"
       />
+      <label htmlFor={`value-${index}`} className="block text-sm font-medium">
+        Value
+      </label>
       <InputField
         type="number"
         name={`value-${index}`}
