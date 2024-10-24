@@ -46,7 +46,7 @@ export interface TransformedStackedBarChart {
   xAxisLabel: string;
   yAxisLabel: string;
   categories: string[];
-  data: BarChartDataPoint[];
+  data: StackedBarChartDataPoint[];
 }
 
 export interface TransformedBarChart {

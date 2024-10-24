@@ -71,7 +71,7 @@ const DataPointList: React.FC<DataPointListProps> = ({
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
       {data.map((point, index) => (
         <DataPoint
           key={index}
