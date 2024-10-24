@@ -1,6 +1,7 @@
 export const RoutePaths = {
   Home: '/',
   Edit: '/edit/:id',
+  Not_Found: '/404',
 };
 
 export const CHART_MARGINS = {

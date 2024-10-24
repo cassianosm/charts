@@ -4,6 +4,7 @@ import EditChart from './pages/EditChart';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { RoutePaths } from './constants';
+import NotFound from './pages/NotFound';
 
 const App = () => (
   <div className="flex flex-col min-h-screen">
@@ -13,6 +14,8 @@ const App = () => (
         <Routes>
           <Route path={RoutePaths.Home} element={<Dashboard />} />
           <Route path={RoutePaths.Edit} element={<EditChart />} />
+          <Route path={RoutePaths.Not_Found} element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

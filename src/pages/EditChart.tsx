@@ -9,6 +9,8 @@ import { fetchAndTransformCharts } from '../api/apiService';
 import Chart from '../components/charts/Chart';
 import { ChartType } from '../models/chartTypes';
 import BarChartForm from '../components/forms/BarChartForm';
+import { useNavigate } from 'react-router-dom';
+import { RoutePaths } from '../constants';
 
 /**
  * EditChart component allows for editing a chart by its ID.
@@ -22,6 +24,7 @@ const EditChart = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
   const [chart, setChart] = useState<TransformedChart | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchChart = async () => {
@@ -30,8 +33,12 @@ const EditChart = (): JSX.Element => {
       // Alternative: load the charts in local state (Redux, MobX) and retrieve from the store
       const charts = await fetchAndTransformCharts();
       const selectedChart = charts[parseInt(id!)];
-      setChart(selectedChart);
-      setIsLoading(false);
+      if (!selectedChart) {
+        navigate(RoutePaths.Not_Found);
+      } else {
+        setChart(selectedChart);
+        setIsLoading(false);
+      }
     };
 
     fetchChart();
@@ -41,12 +48,21 @@ const EditChart = (): JSX.Element => {
     setChart(updatedChart);
   };
 
+  // Function to render the loading or error state
+  const renderLoadingOrError = (message: string) => (
+    <MainWrapper title="Edit Chart">
+      <div className="flex items-center justify-center h-full">
+        <p>{message}</p>
+      </div>
+    </MainWrapper>
+  );
+
   if (isLoading) {
-    return <div>Loading...</div>;
+    return renderLoadingOrError('Loading...');
   }
 
   if (!chart) {
-    return <div>Error Loading Chart</div>;
+    return renderLoadingOrError('Error Loading Chart.');
   }
 
   return (
