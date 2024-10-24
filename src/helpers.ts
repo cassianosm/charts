@@ -2,6 +2,7 @@ import {
   BarChartDataPoint,
   LineChartDataPoint,
   PieChartDataPoint,
+  StackedBarChartDataPoint,
 } from './models/transformedChartTypes';
 import {
   ResponseBarChart,
@@ -21,7 +22,7 @@ export const transformBarChartData = (
 ): BarChartDataPoint[] => {
   return chart.data.map(point => ({
     name: point.x,
-    [chart.yAxisLabel]: point.y,
+    value: point.y,
   }));
 };
 
@@ -29,13 +30,13 @@ export const transformBarChartData = (
  * Transforms data for a bar chart.
  *
  * @param {ResponseBarChart | ResponseStackedBarChart} chart - The chart data to transform.
- * @returns {BarChartDataPoint[]} The transformed data suitable for the chart component.
+ * @returns {StackedBarChartDataPoint[]} The transformed data suitable for the chart component.
  */
 export const transformStackedBarChartData = (
   chart: ResponseStackedBarChart,
-): BarChartDataPoint[] => {
+): StackedBarChartDataPoint[] => {
   return (chart.data as { x: string; values: number[] }[]).map(point => {
-    const result: BarChartDataPoint = { name: point.x }; // 'name' is string, dynamic keys are numbers
+    const result: StackedBarChartDataPoint = { name: point.x }; // 'name' is string, dynamic keys are numbers
     chart.categories?.forEach((category, index) => {
       result[category] = point.values[index];
     });

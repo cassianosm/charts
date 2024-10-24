@@ -2,7 +2,6 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
-  Legend,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -57,12 +56,7 @@ const CustomBarChart = ({ chart }: CustomBarChartProps): JSX.Element => {
           }}
         />
         <Tooltip />
-        <Legend
-          verticalAlign="bottom"
-          align="right"
-          wrapperStyle={{ bottom: 20 }}
-        />
-        <Bar dataKey={yAxisLabel} fill={CHART_COLORS[0]} />
+        <Bar dataKey={'value'} fill={CHART_COLORS[0]} />
       </BarChart>
     </ResponsiveContainer>
   );
