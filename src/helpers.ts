@@ -2,13 +2,13 @@ import {
   BarChartDataPoint,
   LineChartDataPoint,
   PieChartDataPoint,
-} from '../types';
+} from './models/transformedChartTypes';
 import {
   ResponseBarChart,
   ResponseStackedBarChart,
   ResponseLineChart,
   ResponsePieChart,
-} from './types';
+} from './models/chartTypes';
 
 /**
  * Transforms data for a bar chart.

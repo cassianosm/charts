@@ -3,10 +3,10 @@ import {
   transformLineChartData,
   transformPieChartData,
   transformStackedBarChartData,
-} from './chatTransformations';
-import { ChartType, ResponseChart } from './types';
-import { getCharts } from './charts';
-import { TransformedChart } from '../types';
+} from '../helpers';
+import { ChartType, ResponseChart } from '../models/chartTypes';
+import { getCharts } from './chartService';
+import { TransformedChart } from '../models/transformedChartTypes';
 
 /**
  * Fetches charts from the API and transforms the data.
