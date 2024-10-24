@@ -5,7 +5,7 @@ import {
   transformStackedBarChartData,
 } from './chatTransformations';
 import { ChartType, ResponseChart } from './types';
-import { getCharts } from './charts';
+import { getCharts } from './chartService';
 import { TransformedChart } from '../types';
 
 /**
