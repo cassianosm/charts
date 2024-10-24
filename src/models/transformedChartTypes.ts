@@ -16,6 +16,11 @@ export interface LineChartDataPoint {
 // For Bar Chart Data
 export interface BarChartDataPoint {
   name: string;
+  value: number;
+}
+
+export interface StackedBarChartDataPoint {
+  name: string;
   [key: string]: number | string;
 }
 

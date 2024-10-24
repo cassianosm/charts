@@ -22,7 +22,6 @@ const Dashboard = (): JSX.Element => {
     const fetchCharts = async () => {
       const data = await fetchAndTransformCharts();
       setCharts(data);
-      console.log('data', data);
     };
 
     fetchCharts();
