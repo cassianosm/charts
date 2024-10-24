@@ -1,4 +1,4 @@
-import { ChartType } from './api/types';
+import { ChartType } from './chartTypes';
 
 // For Pie Chart Data
 export interface PieChartDataPoint {

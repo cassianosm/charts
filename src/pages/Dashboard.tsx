@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { TransformedChart } from '../types';
+import { TransformedChart } from '../models/transformedChartTypes';
 import { fetchAndTransformCharts } from '../api/apiService';
-import { ChartType } from '../api/types';
+import { ChartType } from '../models/chartTypes';
 import CustomLink from '../components/CustomLink';
 import MainWrapper from '../components/MainWrapper';
 import Chart from '../components/charts/Chart';

@@ -1,4 +1,4 @@
-import { ResponseChart } from './types';
+import { ResponseChart } from '../models/chartTypes';
 
 /**
  * Mocking an API to fetch chart data from multiple JSON endpoints.

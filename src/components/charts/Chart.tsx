@@ -4,8 +4,8 @@ import {
   TransformedLineChart,
   TransformedPieChart,
   TransformedStackedBarChart,
-} from '../../types';
-import { ChartType } from '../../api/types';
+} from '../../models/transformedChartTypes';
+import { ChartType } from '../../models/chartTypes';
 import {
   BarChart,
   Bar,
