@@ -15,7 +15,6 @@ export interface ResponseBarChart {
   chartTitle: string;
   xAxisLabel: string;
   yAxisLabel: string;
-  categories?: string[];
   data: ChartDataPoint[];
 }
 
@@ -24,7 +23,7 @@ export interface ResponseStackedBarChart {
   chartTitle: string;
   xAxisLabel: string;
   yAxisLabel: string;
-  categories?: string[];
+  categories: string[];
   data: { x: string; values: number[] }[];
 }
 

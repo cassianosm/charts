@@ -29,6 +29,7 @@ export const getCharts = async (): Promise<ResponseChart[]> => {
 
     return [chart1, chart2, chart3, chart4];
   } catch (error) {
+    console.log('Error', error);
     throw new Error('Error fetching chart data');
   }
 };

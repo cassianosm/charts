@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { ResponseChart } from '../api/types';
-import { getCharts } from '../api/charts';
+import { TransformedChart } from '../types';
+import { fetchAndTransformCharts } from '../api/apiService';
 import { ChartType } from '../api/types';
 import CustomLink from '../components/CustomLink';
 import MainWrapper from '../components/MainWrapper';
+import Chart from '../components/charts/Chart';
 
 /**
  * Dashboard component that fetches and displays a list of charts.
@@ -15,11 +16,11 @@ import MainWrapper from '../components/MainWrapper';
  * @returns {JSX.Element} A dashboard containing a charts with links to edit them.
  */
 const Dashboard = (): JSX.Element => {
-  const [charts, setCharts] = useState<ResponseChart[]>([]);
+  const [charts, setCharts] = useState<TransformedChart[]>([]);
 
   useEffect(() => {
     const fetchCharts = async () => {
-      const data = await getCharts();
+      const data = await fetchAndTransformCharts();
       setCharts(data);
       console.log('data', data);
     };
@@ -30,8 +31,11 @@ const Dashboard = (): JSX.Element => {
     <MainWrapper title="Dashboard">
       <ul className="grid grid-cols-1 gap-10 lg:grid-cols-2 w-full">
         {charts.map((chart, index) => (
-          <li key={index} className="bg-white rounded-lg shadow-md p-6">
-            <p>{chart.chartTitle}</p>
+          <li
+            key={index}
+            className="bg-white rounded-lg shadow-md p-6 border border-gray-200"
+          >
+            <Chart chart={chart} />
             {chart.chartType === ChartType.BAR && (
               <CustomLink to={`/edit/${index}`} label="Edit Chart" />
             )}
