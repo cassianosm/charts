@@ -56,7 +56,9 @@ const BarChartForm: React.FC<ChartFormProps> = ({
     <form onSubmit={handleSubmit} className="space-y-4 lg:w-[600px]">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
-          <label className="block text-sm font-medium">Chart Title</label>
+          <label htmlFor="chartTitle" className="block text-sm font-medium">
+            Chart Title
+          </label>
           <InputField
             type="text"
             name="chartTitle"
@@ -65,7 +67,9 @@ const BarChartForm: React.FC<ChartFormProps> = ({
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">X Axis Label</label>
+          <label htmlFor="xAxisLabel" className="block text-sm font-medium">
+            X Axis Label
+          </label>
           <InputField
             type="text"
             name="xAxisLabel"
@@ -74,7 +78,9 @@ const BarChartForm: React.FC<ChartFormProps> = ({
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Y Axis Label</label>
+          <label htmlFor="yAxisLabel" className="block text-sm font-medium">
+            Y Axis Label
+          </label>
           <InputField
             type="text"
             name="yAxisLabel"
