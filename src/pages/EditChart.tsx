@@ -42,7 +42,7 @@ const EditChart = (): JSX.Element => {
     };
 
     fetchChart();
-  }, [id]);
+  }, [id, navigate]);
 
   const handleUpdate = (updatedChart: TransformedBarChart) => {
     setChart(updatedChart);
@@ -67,7 +67,7 @@ const EditChart = (): JSX.Element => {
 
   return (
     <MainWrapper title="Edit Chart">
-      <div>
+      <div className="flex flex-col items-center">
         <Chart chart={chart} />
         <p className="mt-2 mb-4 text-gray-700">
           To apply any change made, click the Save Changes button.
